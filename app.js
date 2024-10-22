@@ -4,9 +4,10 @@ console.log(lampBulb);
 const button = document.querySelector(".btn");
 console.log(button);
 
-button.addEventListener("click", clickBtn);
-
-function clickBtn() {
-  console.log("Ho cliccato");
-}
-// console.log(switchOnOff);
+button.addEventListener("click", function () {
+  {
+    console.log("Ho cliccato");
+    console.log(lampBulb.className);
+    lampBulb.src = "./img/yellow_lamp.png";
+  }
+});
