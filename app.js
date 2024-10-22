@@ -6,9 +6,16 @@ console.log(button);
 
 button.addEventListener("click", function () {
   {
-    console.log("Ho cliccato");
-    console.log(lampBulb.className);
-    lampBulb.src = "./img/yellow_lamp.png";
-    button.textContent = "Spegni";
+    if (lampBulb.className.includes("bulb-off")) {
+      // console.log("Ho cliccato");
+      // console.log(lampBulb.className);
+      lampBulb.src = "./img/yellow_lamp.png";
+      lampBulb.classList.toggle("bulb-off");
+      button.textContent = "Spegni";
+    } else {
+      lampBulb.src = "./img/white_lamp.png";
+      lampBulb.classList.toggle("bulb-off");
+      button.textContent = "Accendi";
+    }
   }
 });
