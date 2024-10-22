@@ -9,5 +9,6 @@ button.addEventListener("click", function () {
     console.log("Ho cliccato");
     console.log(lampBulb.className);
     lampBulb.src = "./img/yellow_lamp.png";
+    button.textContent = "Spegni";
   }
 });
